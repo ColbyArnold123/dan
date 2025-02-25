@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fast Multi Dan</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh; /* Full screen height */
+            overflow: hidden; /* No scrolling */
+            position: relative;
+        }
+        .dan-text {
+            font-size: 48px; /* Adjust for size */
+            font-family: Arial, sans-serif;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" onclick="function createDan() { let dan = document.createElement('div'); dan.className = 'dan-text'; dan.innerText = 'dan'; dan.style.left = Math.random() * (window.innerWidth - 100) + 'px'; dan.style.top = Math.random() * (window.innerHeight - 50) + 'px'; document.body.appendChild(dan); setTimeout(() => dan.remove(), 1000); }; function spamDan() { createDan(); setTimeout(spamDan, 100); }; spamDan(); return false;">Click me</a>
+</body>
+</html>
